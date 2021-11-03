@@ -25,9 +25,13 @@ figure,
 figcaption,
 blockquote,
 dl,
+hr,
 dd {
   margin: 0;
+  border: 0;
 }
+
+
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
@@ -74,7 +78,6 @@ body {
 }
 hr {
   border-top: 5px solid #feffff;
-  margin: 0 auto;
 }
 h1 {
   font-style: normal;
