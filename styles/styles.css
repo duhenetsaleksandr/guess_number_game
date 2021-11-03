@@ -73,7 +73,8 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 hr {
-  border: 5px solid #feffff;
+  border-top: 5px solid #feffff;
+  margin: 0 auto;
 }
 h1 {
   font-style: normal;
