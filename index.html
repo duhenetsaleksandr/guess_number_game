@@ -11,30 +11,37 @@
 
 <body>
 
-	<div class="content">
-		<div class="header">
-			<h1>Guess the Number</h1>
-			<hr>
-		</div>
-	</div>
-	<div class="wrapper_scoreboard">
-		<h4 class="title_enter">enter the number</h4>
-		<div class="numbers">
-			<div class="num__min-text">
-				<p class="min_text">min <span>1</span></p>
-			</div>
-			<div class="num__title-subtext">
-				<p class="title_enter-text">beetwen 1 and 100</p>
-			</div>
-			<div class="num__max-text">
-				<p class="max_text">max <span>100</span>
-				<p>
-			</div>
+	<header class="header">
+		<h1>Guess the Number</h1>
+		<hr>
+	</header>
 
+	<main class="main">
+		<div class="wrapper_scoreboard">
+			<p class="min_text">min <span>1</span></p>
+			<div class="wrapper_info">
+				<h4 class="title_enter">enter the number</h4>
+				<p class="title_enter-text">beetwen <span>1</span> and <span>100</span></p>
+				<p class="title_enter-podtext"><span>5</span> shots left</p>
+			</div>
+			<p class="max_text">max <span>100</span></p>
 		</div>
-		<p class="title_enter-podtext">5 shots left</p>
 
-	</div>
+		<div class="wrapper_buttons">
+			<div class="input">
+				<label for="user_number">Enter your number</label>
+				<input type="number" id="user_number">
+			</div>
+			<div class="buttons">
+				<button class="basic-btn">check</button>
+				<button class="basic-btn">new game</button>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+
+	</footer>
 
 	<script src="script/script.js"></script>
 </body>
