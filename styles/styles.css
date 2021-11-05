@@ -170,8 +170,6 @@ input[type="number"]::-webkit-inner-spin-button {
 	flex-direction: column;
 	position: relative;
 	width: 50%;
-
-	margin-right: 25px;
 }
 
 label[for="user_number"] {
@@ -201,7 +199,6 @@ label[for="user_number"] {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 30px;
-	margin-left: -25px;
 }
 
 .basic-btn {
@@ -221,35 +218,21 @@ label[for="user_number"] {
 
 	transition: all 0.2s ease;
 }
-
-.newGame-btn{
-	width: 212.5px;
-	height: 50px;
-
-	border: 2px seashell solid ;
-	outline: 0;
-	border-radius: 5px;
-	cursor: pointer;
-	color: #feffff;
+  .new_game-btn{
 	background-color: #3aafa9;
-	font-size: 20px;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-
-	transition: all 0.2s ease;
+	border: 1px seashell solid ;
 }
 
-.basic-btn:hover {
+
+.basic-btn:hover,
+.new_game-btn:hover{
 	background-color: #2b7a78;
 }
-.newGame-btn:hover{
-	background-color: #2b7a78;
-}
-.basic-btn:active {
+
+ .basic-btn:active,
+ .new_game-btn:active {
 	background-color: #374785;
-}
-.newGame-btn:active {
-	background-color: #374785;
+    border: 0;
 }
 .footer {
 	width: 100%;
