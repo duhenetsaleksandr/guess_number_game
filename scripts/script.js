@@ -28,7 +28,7 @@ function generate () {
 	userNum = Number(userNum);
 	if  (initialValues.shots > 0) {
 		switch (true) {
-			case (userNum <= initialValues.min || userNum >= initialValues.max):
+			case (userNum < initialValues.min || userNum > initialValues.max):
 				initialValues.shots -= 1;
 				mainText.innerText = 'Number outside the range';
 				promptText.innerText = 'value must be in the range';
