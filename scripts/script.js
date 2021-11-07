@@ -16,8 +16,7 @@ function start(min = 1, max = 100, shots = 5) {
 	checkBtn.removeAttribute('disabled');
 }
 
-
-checkBtn.addEventListener('click', generate);
+    checkBtn.addEventListener('click', generate);
 function generate () {
     let userNum = inputUserValue.value;
 	if  (userNum.length === 0) {
@@ -59,6 +58,10 @@ function generate () {
 				break;
 			default:
 				initialValues.shots -= 1;
+				mainText.innerText = 'You did not guess right';
+				promptText.innerText = 'try again';
+				shotsLeft.innerText = initialValues.shots;
+
 				break;
 		}
 	}
