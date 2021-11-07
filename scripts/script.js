@@ -61,7 +61,8 @@ function generate () {
 				initialValues.shots -= 1;
 				break;
 		}
-	} else {
+	}
+	if (initialValues.shots === 0) {
 		mainText.innerText = 'Game over';
 		promptText.innerText = 'try again';
 		stop();
@@ -71,10 +72,6 @@ function generate () {
 function stop() {
 	checkBtn.setAttribute('disabled', 'disabled');
 }
-
-
-
-
 
 function randomInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
