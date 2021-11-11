@@ -8,68 +8,70 @@ const shotsLeft = document.getElementById("shots");
 
 const initialValues = {};
 
+checkBtn.addEventListener('click', generate);
+newGameBtn.addEventListener('click', newGame);
+
 function start(min = 1, max = 100, shots = 5) {
 	initialValues.min = min;
 	initialValues.max = max;
 	initialValues.shots = shots;
+	initialValues.shotsCounter = shots;
 	initialValues.mysNumbers = randomInteger(min, max);
 	checkBtn.removeAttribute('disabled');
+	show('try your luck', 'guess the mysterious number');
+	inputUserValue.value = '';
 }
 
-    checkBtn.addEventListener('click', generate);
+function newGame() {
+	start();
+}
+
 function generate () {
     let userNum = inputUserValue.value;
 	if  (userNum.length === 0) {
-		mainText.innerText = 'Value is empty';
-		promptText.innerText = 'value must not be empty';
+		show ('Value is empty', 'value must not be empty');
 		return;
 	}
 	userNum = Number(userNum);
-	if  (initialValues.shots > 0) {
+	if  (initialValues.shotsCounter > 0) {
 		switch (true) {
 			case (userNum < initialValues.min || userNum > initialValues.max):
-				initialValues.shots -= 1;
-				mainText.innerText = 'Number outside the range';
-				promptText.innerText = 'value must be in the range';
-				shotsLeft.innerText = initialValues.shots;
+				initialValues.shotsCounter -= 1;
+				show ('Number outside the range', 'value must be in the range');
 				break;
 			case (Number.isInteger(userNum) === false):
-				initialValues.shots -= 1;
-				mainText.innerText = 'Number is not integer';
-				promptText.innerText = 'only integer';
-				shotsLeft.innerText = initialValues.shots;
+				initialValues.shotsCounter -= 1;
+				show('Number is not integer', 'only integer');
 				break;
 			case (userNum > initialValues.mysNumbers):
-				initialValues.shots -= 1;
-				mainText.innerText = 'You did not guess right';
-				promptText.innerText = 'bit too much';
-				shotsLeft.innerText = initialValues.shots;
+				initialValues.shotsCounter -= 1;
+				show('You did not guess right', 'bit too much');
 				break;
 			case (userNum < initialValues.mysNumbers):
-				initialValues.shots -= 1;
-				mainText.innerText = 'You did not guess right';
-				promptText.innerText = 'not enough';
-				shotsLeft.innerText = initialValues.shots;
+				initialValues.shotsCounter -= 1;
+				show('You did not guess right', 'not enough');
 				break;
 			case (userNum === initialValues.mysNumbers):
-				mainText.innerText = 'You win';
-				promptText.innerText = `mystery number is ${initialValues.mysNumbers}`;
+				const tookShots = initialValues.shots - initialValues.shotsCounter + 1; 
+				show('You win', `mystery number is ${initialValues.mysNumbers}`, `you needed ${tookShots} shots`);
 				stop();
 				break;
 			default:
-				initialValues.shots -= 1;
-				mainText.innerText = 'You did not guess right';
-				promptText.innerText = 'try again';
-				shotsLeft.innerText = initialValues.shots;
-
+				initialValues.shotsCounter -= 1;
+				show('You did not guess right', 'try again');
 				break;
 		}
 	}
-	if (initialValues.shots === 0) {
-		mainText.innerText = 'Game over';
-		promptText.innerText = 'try again';
+	if (initialValues.shotsCounter === 0) {
+		show('Game over', 'try again');
 		stop();
 	}
+}
+
+function show(title, prompt, shots = `${initialValues.shotsCounter} shots left`){
+	mainText.innerText = title;
+	promptText.innerText = prompt;
+	shotsLeft.innerText = shots;
 }
 
 function stop() {
