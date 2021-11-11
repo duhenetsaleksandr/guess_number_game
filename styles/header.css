@@ -1,0 +1,11 @@
+header h1 {
+    font-size: 110px;
+    text-align: center;
+    color: #feffff;
+    line-height: 150px;
+    font-weight: normal;
+}
+
+header hr {
+    border-top: 5px solid #feffff;
+}
