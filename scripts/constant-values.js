@@ -8,5 +8,5 @@ const shotsLeft = document.getElementById("shots");
 
 const initialValues = {};
 
-const MAIN_TEXT = 'try your luck';
-const PROMPT_TEXT = 'guess the mysterious number';
+const MAIN_TEXT_MESSAGE = 'try your luck';
+const PROMPT_TEXT_MESSAGE = 'guess the mysterious number';

@@ -6,7 +6,7 @@ function start(min = 1, max = 100, shots = 5) {
    initialValues.mysNumbers = randomInteger(min, max);
 
    checkBtn.removeAttribute('disabled');
-   show(MAIN_TEXT, PROMPT_TEXT);
+   show(MAIN_TEXT_MESSAGE, PROMPT_TEXT_MESSAGE);
    inputUserValue.value = '';
 }
 
