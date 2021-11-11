@@ -1,4 +1,5 @@
-function generate () {
+function generate (event) {
+   event.preventDefault();
    let userNum = inputUserValue.value;
    if  (userNum.length === 0) {
       show ('Value is empty', 'value must not be empty');
@@ -37,5 +38,12 @@ function generate () {
    if (initialValues.shotsCounter === 0) {
       show('Game over', 'try again');
       stop();
+   }
+}
+
+function enterSubmit(event) {
+   if (event.keyCode === 13) {
+      event.preventDefault();
+      generate(event);
    }
 }

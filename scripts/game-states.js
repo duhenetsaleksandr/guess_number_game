@@ -10,7 +10,8 @@ function start(min = 1, max = 100, shots = 5) {
    inputUserValue.value = '';
 }
 
-function newGame() {
+function newGame(event) {
+   event.preventDefault();
    start();
 }
 
