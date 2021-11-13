@@ -3,12 +3,10 @@
     --body-bg-color: #3aafa9;
     --light-primary-color: #def2f1;
     --dark-primary-color: #17252a;
-    --dark-color: #2b7a78;  // 
-
-    --btn-bg-active-color: #374785;  //--btnbgactivcolor: #374785;
-    --btn-font-disabled-color: #c7c7c7;  //--btndisabled: #c7c7c7;
-    --btn-bg-disabled-color: #83838373; //--btnbgdisabled: #83838373;
-}
+    --dark-color: #2b7a78;
+    --btn-bg-active-color: #374785;
+    --btn-font-disabled-color: #c7c7c7;
+    --btn-bg-disabled-color: #83838373;
 
 body {
     background-color: var(--body-bg-color);
