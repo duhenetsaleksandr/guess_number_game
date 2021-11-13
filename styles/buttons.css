@@ -19,7 +19,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 label[for="user_number"] {
-	color: var(--hdcolor);
+	color: var(--font-color);
 	font-size: 18px;
 	position: absolute;
 	top: -26px;
@@ -35,12 +35,13 @@ label[for="user_number"] {
 	padding: 12px;
 	font-size: 25px;
 	letter-spacing: 0.1em;
-	background-color: var(--btnbgcolor);
-	color: #17252a;
+
+	background-color: var(--light-primary-color);
+	color: var(--dark-primary-color);
 }
 
 #user_number:focus {
-	box-shadow: 0px 0px 10px 0px var(--btncolor);
+	box-shadow: 0px 0px 10px 0px var(--dark-primary-color);
 }
 
 .buttons {
@@ -58,8 +59,8 @@ label[for="user_number"] {
 	outline: 0;
 	border-radius: 5px;
 	cursor: pointer;
-	color: var(--hdcolor);
-	background-color: var(--btncolor);
+	color: var(--font-color);
+	background-color: var(--dark-primary-color);
 
 	font-size: 20px;
 	text-transform: uppercase;
@@ -75,19 +76,19 @@ label[for="user_number"] {
 
 .basic-btn:hover,
 .new_game-btn:hover {
-	background-color: var(--btnbghovercoltr);
+	background-color: var(--dark-color);
 	border: 0;
 }
 
 .basic-btn:active,
 .new_game-btn:active {
-	background-color: var(--btnbgactivcolor);
+	background-color: var(--btn-bg-active-color);
 	border: 0;
 }
 .basic-btn:disabled {
 	cursor: not-allowed;
-	color: #c7c7c7;
-	background-color: var(--btnbgdisabled);
+	color: var(--btn-font-disabled-color);
+	background-color: var(--btn-bg-disabled-color);
 }
 
 #user_number:disabled {
