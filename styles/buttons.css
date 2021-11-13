@@ -19,7 +19,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 label[for="user_number"] {
-	color: #feffff;
+	color: var(--hdcolor);
 	font-size: 18px;
 	position: absolute;
 	top: -26px;
@@ -35,12 +35,12 @@ label[for="user_number"] {
 	padding: 12px;
 	font-size: 25px;
 	letter-spacing: 0.1em;
-	background-color: #def2f1;
+	background-color: var(--btnbgcolor);
 	color: #17252a;
 }
 
 #user_number:focus {
-	box-shadow: 0px 0px 10px 0px #17252a;
+	box-shadow: 0px 0px 10px 0px var(--btncolor);
 }
 
 .buttons {
@@ -58,8 +58,8 @@ label[for="user_number"] {
 	outline: 0;
 	border-radius: 5px;
 	cursor: pointer;
-	color: #feffff;
-	background-color: #17252a;
+	color: var(--hdcolor);
+	background-color: var(--btncolor);
 
 	font-size: 20px;
 	text-transform: uppercase;
@@ -75,19 +75,19 @@ label[for="user_number"] {
 
 .basic-btn:hover,
 .new_game-btn:hover {
-	background-color: #2b7a78;
+	background-color: var(--btnbghovercoltr);
 	border: 0;
 }
 
 .basic-btn:active,
 .new_game-btn:active {
-	background-color: #374785;
+	background-color: var(--btnbgactivcolor);
 	border: 0;
 }
 .basic-btn:disabled {
 	cursor: not-allowed;
 	color: #c7c7c7;
-	background-color: #83838373;
+	background-color: var(--btnbgdisabled);
 }
 
 #user_number:disabled {

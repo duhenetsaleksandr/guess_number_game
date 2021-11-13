@@ -1,5 +1,17 @@
+:root {
+    --hdcolor: #feffff;
+    --bodcolor: #3aafa9;
+    --btnbgcolor: #def2f1;
+    --btncolor: #17252a;
+    --btnbghovercoltr: #2b7a78;
+    --btnbgactivcolor: #374785;
+    --btndisabled: #c7c7c7;
+    --btnbgdisabled: #83838373;
+}
+
+
 body {
-    background-color: #3aafa9;
+    background-color: var(--bodcolor);
     font-family: "Roboto Condensed", sans-serif;
     letter-spacing: 0.1em;
 
