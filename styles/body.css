@@ -7,6 +7,7 @@
     --btn-bg-active-color: #374785;
     --btn-font-disabled-color: #c7c7c7;
     --btn-bg-disabled-color: #83838373;
+}
 
 body {
     background-color: var(--body-bg-color);
