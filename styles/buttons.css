@@ -19,7 +19,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 label[for="user_number"] {
-	color: #feffff;
+	color: var(--font-color);
 	font-size: 18px;
 	position: absolute;
 	top: -26px;
@@ -35,12 +35,13 @@ label[for="user_number"] {
 	padding: 12px;
 	font-size: 25px;
 	letter-spacing: 0.1em;
-	background-color: #def2f1;
-	color: #17252a;
+
+	background-color: var(--light-primary-color);
+	color: var(--dark-primary-color);
 }
 
 #user_number:focus {
-	box-shadow: 0px 0px 10px 0px #17252a;
+	box-shadow: 0px 0px 10px 0px var(--dark-primary-color);
 }
 
 .buttons {
@@ -58,8 +59,8 @@ label[for="user_number"] {
 	outline: 0;
 	border-radius: 5px;
 	cursor: pointer;
-	color: #feffff;
-	background-color: #17252a;
+	color: var(--font-color);
+	background-color: var(--dark-primary-color);
 
 	font-size: 20px;
 	text-transform: uppercase;
@@ -75,19 +76,19 @@ label[for="user_number"] {
 
 .basic-btn:hover,
 .new_game-btn:hover {
-	background-color: #2b7a78;
+	background-color: var(--dark-color);
 	border: 0;
 }
 
 .basic-btn:active,
 .new_game-btn:active {
-	background-color: #374785;
+	background-color: var(--btn-bg-active-color);
 	border: 0;
 }
 .basic-btn:disabled {
 	cursor: not-allowed;
-	color: #c7c7c7;
-	background-color: #83838373;
+	color: var(--btn-font-disabled-color);
+	background-color: var(--btn-bg-disabled-color);
 }
 
 #user_number:disabled {
