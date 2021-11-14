@@ -1,5 +1,36 @@
 .footer {
-    width: 100%;
-    height: 150px;
-    background-color: var(--dark-primary-color);
+	width: 100%;
+	height: 150px;
+	background-color: var(--dark-color);
+	padding: 10px 110px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.1em;
+	color: var(--light-primary-color);
+}
+
+.authors__title {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.contacts {
+	display: flex;
+	flex-direction: column;
+}
+.social {
+	display: flex;
+	margin-bottom: 10px;
+	padding-left: 95px;
+}
+.copy__text {
+	margin-right: 25px;
+}
+.copy__text span {
+	display: block;
+	margin-left: 35px;
+}
+.social__link + .social__link {
+	margin-left: 15px;
 }
