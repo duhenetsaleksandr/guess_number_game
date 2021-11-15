@@ -4,7 +4,8 @@
 	background-color: var(--dark-color);
 	padding: 20px 0;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
 	font-size: 18px;
 	line-height: 21px;
 	letter-spacing: 0.1em;
@@ -17,9 +18,7 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.authors {
-	margin-left: 40px;
-}
+
 .authors__title {
 	font-weight: 700;
 	text-transform: uppercase;
@@ -33,16 +32,11 @@
 .social {
 	display: flex;
 	justify-content: right;
-	/* margin-bottom: 35px;
-	padding-left: 95px; */
 }
-/* .copy__text {
-	margin-right: 25px;
-} */
+
 .copy__text span {
 	display: block;
 	text-align: right;
-	/* margin-left: 38px; */
 }
 .social__link + .social__link {
 	margin-left: 15px;
