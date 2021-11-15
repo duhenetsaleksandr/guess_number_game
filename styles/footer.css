@@ -2,7 +2,7 @@
 	width: 100%;
 	height: 150px;
 	background-color: var(--dark-color);
-	padding: 10px 110px;
+	padding: 20px 110px;
 	display: flex;
 	justify-content: space-around;
 	font-size: 18px;
@@ -10,7 +10,9 @@
 	letter-spacing: 0.1em;
 	color: var(--light-primary-color);
 }
-
+.authors {
+	margin-left: 40px;
+}
 .authors__title {
 	font-weight: 700;
 	text-transform: uppercase;
@@ -18,10 +20,11 @@
 .contacts {
 	display: flex;
 	flex-direction: column;
+	margin-right: 10px;
 }
 .social {
 	display: flex;
-	margin-bottom: 10px;
+	margin-bottom: 35px;
 	padding-left: 95px;
 }
 .copy__text {
@@ -29,7 +32,7 @@
 }
 .copy__text span {
 	display: block;
-	margin-left: 35px;
+	margin-left: 38px;
 }
 .social__link + .social__link {
 	margin-left: 15px;
