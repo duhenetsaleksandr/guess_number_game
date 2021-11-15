@@ -2,13 +2,20 @@
 	width: 100%;
 	height: 150px;
 	background-color: var(--dark-color);
-	padding: 20px 110px;
+	padding: 20px 0;
 	display: flex;
 	justify-content: space-around;
 	font-size: 18px;
 	line-height: 21px;
 	letter-spacing: 0.1em;
 	color: var(--light-primary-color);
+}
+.footer__container {
+	width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .authors {
 	margin-left: 40px;
@@ -18,21 +25,24 @@
 	text-transform: uppercase;
 }
 .contacts {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-right: 10px;
+	justify-content: space-between;
 }
 .social {
 	display: flex;
-	margin-bottom: 35px;
-	padding-left: 95px;
+	justify-content: right;
+	/* margin-bottom: 35px;
+	padding-left: 95px; */
 }
-.copy__text {
+/* .copy__text {
 	margin-right: 25px;
-}
+} */
 .copy__text span {
 	display: block;
-	margin-left: 38px;
+	text-align: right;
+	/* margin-left: 38px; */
 }
 .social__link + .social__link {
 	margin-left: 15px;
