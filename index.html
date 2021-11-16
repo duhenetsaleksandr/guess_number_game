@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Guess Number</title>
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -14,59 +14,63 @@
 
 	<header class="header">
 		<h1>Guess the Number</h1>
-		<div class="drop-down_menu">
-			<input type="checkbox" id="hmt" class="hidden-menu-ticker">
-			<label for="hmt" class="btn-menu"> <span></span></label>
-			<div class="hidden-menu">
-				<nav class="menu_list">
-					<div class="switch-case">
-						<label class="switch">
-							<input checked type="checkbox" />
-							<span class="slider round"></span>
-						</label>
-					</div>
-					<form action="#" class="wrapper_buttons">
-						<div class="input-hidden-menu">
-							<label for="Min">Min</label>
-							<input type="number" id="Min">
-						</div>
-						<div class="input-hidden-menu">
-							<label for="Max">Max</label>
-							<input type="number" id="Max">
-						</div>
-						<div class="input-hidden-menu">
-							<label for="Shots">Shots</label>
-							<input type="number" id="Shots">
-						</div>
-						<div class="buttons-hidden-menu">
-							<button id="config" class="basic-btn">CONFIG</button>
-						</div>
-					</form>
-				</nav>
-			</div>
 	</header>
 
 	<main class="main">
-		<div class="wrapper_scoreboard">
-			<p class="min_text">min <span>1</span></p>
-			<div class="wrapper_info">
-				<p id="prompt_text" class="title_enter-text"></p>
-				<h4 id="main_text" class="title_enter"></h4>
-				<p id="shots" class="title_enter-podtext"></p>
+		<div class="main__container">
+			<div class="wrapper_scoreboard">
+				<p class="min_text">min <span>1</span></p>
+				<div class="wrapper_info">
+					<p id="prompt_text" class="title_enter-text"></p>
+					<h4 id="main_text" class="title_enter"></h4>
+					<p id="shots" class="title_enter-podtext"></p>
+				</div>
+				<p class="max_text">max <span>100</span></p>
 			</div>
-			<p class="max_text">max <span>100</span></p>
-		</div>
 
-		<form action="#" class="wrapper_buttons">
-			<div class="input">
-				<label for="user_number">Enter your number</label>
-				<input type="number" id="user_number">
+			<form action="#" class="wrapper_buttons">
+				<div class="input">
+					<label for="user_number">Enter your number</label>
+					<input type="number" id="user_number" class="basic-input">
+				</div>
+				<div class="buttons">
+					<button id="new_game" class="basic-btn new_game-btn">new game</button>
+					<button id="check" class="basic-btn">check</button>
+				</div>
+			</form>
+
+			<div class="drop-down_menu">
+				<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+				<label for="hmt" class="btn-menu"> <span></span></label>
+				<div class="hidden-menu">
+					<div class="menu_list">
+						<div class="switch-case">
+							<label class="switch">
+								<input checked type="checkbox" />
+								<span class="slider round"></span>
+							</label>
+						</div>
+						<form action="#" class="wrapper_buttons">
+							<div class="input-hidden-menu">
+								<label for="min-sett">Min</label>
+								<input type="number" id="min-sett" class="basic-input">
+							</div>
+							<div class="input-hidden-menu">
+								<label for="max-sett">Max</label>
+								<input type="number" id="max-sett" class="basic-input">
+							</div>
+							<div class="input-hidden-menu">
+								<label for="shots-sett">Shots</label>
+								<input type="number" id="shots-sett" class="basic-input">
+							</div>
+							<div class="buttons-hidden-menu">
+								<button id="config" class="basic-btn">CONFIG</button>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
-			<div class="buttons">
-				<button id="new_game" class="basic-btn new_game-btn">new game</button>
-				<button id="check" class="basic-btn">check</button>
-			</div>
-		</form>
+		</div>
 	</main>
 
 	<footer class="footer">
@@ -103,9 +107,7 @@
 	</footer>
 
 	<script src="scripts/constant-values.js"></script>
-	<script src="scripts/random.js"></script>
-	<script src="scripts/show-message.js"></script>
-	<script src="scripts/game-states.js"></script>
+	<script src="scripts/helpers.js"></script>
 	<script src="scripts/generate.js"></script>
 	<script src="scripts/app.js"></script>
 </body>
