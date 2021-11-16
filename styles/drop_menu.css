@@ -7,7 +7,7 @@ html{
   display: inline-block;
   width: 74px;
   height: 40px;
-  margin: 30px;
+  margin: 0 30px 40px;
   border: 2px solid var(--light-primary-color);
   border-radius: 50px;
 }
@@ -52,10 +52,6 @@ input:checked + .slider:before {
   transform: translate(100%, -50%);
 }
 
-.slider.round {
-  border-radius: 34px;
-}
-
 .slider.round:before {
   border-radius: 50%;
 }
@@ -66,11 +62,10 @@ input:checked + .slider:before {
 }
 
 .btn-menu{
-  display: block;
   background-color: var(--dark-color);
   padding: 0;
   position: absolute;
-  top: 150px;
+  top: 0;
   right: 0;
   cursor: pointer;
   transition: right .2s;
@@ -81,22 +76,25 @@ input:checked + .slider:before {
 }
 
 .hidden-menu{
-  display: block;
   position: absolute;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   width: 400px;
-  height: 670px;
+  height: 100%;
   background-color: var(--dark-color);
-  top: 150px;
-  right: 0;
+  top: 0;
+  right: -400px;
   transition: right .2s;
   backface-visibility: hidden;
 }
 
-.hidden-menu{
- right: -400px;
+.menu_list {
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden-menu-ticker {
@@ -109,32 +107,25 @@ input:checked + .slider:before {
 
 .hidden-menu-ticker:checked~.hidden-menu{
   right: 0;
-  display: block;
-}
-
-.switch{
-  margin-top: 100px;
-  margin-bottom: 90px;
 }
 
 #min-sett,
 #max-sett,
 #shots-sett {
   width: 300px;
-  height: 50px;
-  border-radius: 5px;
-  border: 0;
-  outline: 0;
-  padding: 12px;
-  font-size: 25px;
-  letter-spacing: 0.1em;
   margin-bottom: 40px;
-  background-color: var(--light-primary-color);
-  color: var(--dark-primary-color);
 }
 
 #config{
   width: 300px;
+}
+
+#config:hover {
+ background-color: var(--body-bg-color);
+}
+
+#config:active {
+  background-color: var(--btn-bg-active-color);
 }
 
 label[for="min-sett"],
