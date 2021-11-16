@@ -117,9 +117,9 @@ input:checked + .slider:before {
   margin-bottom: 90px;
 }
 
-#Min,
-#Max,
-#Shots{
+#min-sett,
+#max-sett,
+#shots-sett {
   width: 300px;
   height: 50px;
   border-radius: 5px;
@@ -137,9 +137,9 @@ input:checked + .slider:before {
   width: 300px;
 }
 
-label[for="Min"],
-[for="Max"],
-[for="Shots"] {
+label[for="min-sett"],
+label[for="max-sett"],
+label[for="shots-sett"] {
   color: var(--font-color);
   font-size: 18px;
   position: absolute;
