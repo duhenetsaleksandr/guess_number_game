@@ -7,3 +7,8 @@ function show(title, prompt, shots = `${initialValues.shotsCounter} shots left`)
    promptText.innerText = prompt;
    shotsLeft.innerText = shots;
 }
+
+function stop() {
+   checkBtn.setAttribute('disabled', 'disabled');
+   inputUserValue.setAttribute('disabled', 'disabled');
+}

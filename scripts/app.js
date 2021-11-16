@@ -12,14 +12,16 @@ function init(min = 1, max = 100, shots = 5) {
 	inputUserValue.focus();
 }
 
+function enterSubmit(event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		generate(event);
+	}
+}
+
 function newGame(event) {
 	event.preventDefault();
 	init();
-}
-
-function stop() {
-	checkBtn.setAttribute('disabled', 'disabled');
-	inputUserValue.setAttribute('disabled', 'disabled');
 }
 
 checkBtn.addEventListener('click', generate);
