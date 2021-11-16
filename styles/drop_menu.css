@@ -12,7 +12,7 @@ html{
   border-radius: 50px;
 }
 
-  .switch-case{
+.switch-case{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ html{
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -144,5 +144,5 @@ label[for="Min"],
   font-size: 18px;
   position: absolute;
   margin-top: -25px;
-  line-height: 21.px;
+  line-height: 21px;
 }
