@@ -1,12 +1,11 @@
 html{
   overflow-x: hidden;
-
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 75px;
+  width: 74px;
   height: 40px;
   margin: 30px;
   border: 2px solid var(--light-primary-color);
@@ -17,7 +16,6 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   margin: 0;
 }
 
@@ -30,7 +28,7 @@ html{
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 3px;
+  top: 0px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -46,10 +44,12 @@ html{
   left: 5px;
   background-color: var(--light-primary-color);
   transition: 0.4s;
+  top: 50%;
+  transform:translateY(-50%);
 }
 
 input:checked + .slider:before {
-  transform: translate(100%);
+  transform: translate(100%, -50%);
 }
 
 .slider.round {
@@ -73,7 +73,7 @@ input:checked + .slider:before {
   top: 150px;
   right: 0;
   cursor: pointer;
-  transition: right .23s;
+  transition: right .2s;
   width: 50px;
   height: 50px;
   transform: translateZ(0);
@@ -135,7 +135,6 @@ input:checked + .slider:before {
 
 #config{
   width: 300px;
-  margin-bottom: 100px;
 }
 
 label[for="Min"],
@@ -145,5 +144,5 @@ label[for="Min"],
   font-size: 18px;
   position: absolute;
   margin-top: -25px;
-  line-height: 21.09px;
+  line-height: 21.px;
 }
