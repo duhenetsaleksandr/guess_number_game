@@ -1,4 +1,4 @@
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -12,7 +12,7 @@ html{
   border-radius: 50px;
 }
 
-.switch-case{
+.switch-case {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,7 @@ html{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:transparent;
+  background-color: transparent;
   transition: 0.4s;
 }
 
@@ -45,7 +45,7 @@ html{
   background-color: var(--light-primary-color);
   transition: 0.4s;
   top: 50%;
-  transform:translateY(-50%);
+  transform: translateY(-50%);
 }
 
 input:checked + .slider:before {
@@ -61,21 +61,7 @@ input:checked + .slider:before {
   cursor: default;
 }
 
-.btn-menu{
-  background-color: var(--dark-color);
-  padding: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  transition: right .2s;
-  width: 50px;
-  height: 50px;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-.hidden-menu{
+.hidden-menu {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -84,7 +70,7 @@ input:checked + .slider:before {
   background-color: var(--dark-color);
   top: 0;
   right: -400px;
-  transition: right .2s;
+  transition: right 0.2s;
   backface-visibility: hidden;
 }
 
@@ -101,11 +87,11 @@ input:checked + .slider:before {
   display: none;
 }
 
-.hidden-menu-ticker:checked~.btn-menu{
+.hidden-menu-ticker:checked ~ .btn-menu {
   right: 400px;
 }
 
-.hidden-menu-ticker:checked~.hidden-menu{
+.hidden-menu-ticker:checked ~ .hidden-menu {
   right: 0;
 }
 
@@ -116,12 +102,12 @@ input:checked + .slider:before {
   margin-bottom: 40px;
 }
 
-#config{
+#config {
   width: 300px;
 }
 
 #config:hover {
- background-color: var(--body-bg-color);
+  background-color: var(--body-bg-color);
 }
 
 #config:active {
@@ -136,4 +122,80 @@ label[for="shots-sett"] {
   position: absolute;
   margin-top: -25px;
   line-height: 21px;
+}
+
+.switch-icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch-icon svg {
+  fill: var(--dark-primary-color);
+
+  transition: all 0.3s ease;
+}
+
+.switch-icon.sun {
+  left: -40px;
+}
+
+.switch-icon.moon {
+  right: -40px;
+}
+
+label.switch input[type="checkbox"]:checked ~ .switch-icon.moon svg {
+  fill: var(--font-color);
+}
+
+label.switch input[type="checkbox"]:not(:checked) ~ .switch-icon.sun svg {
+  fill: var(--font-color);
+}
+
+.btn-menu {
+  background-color: var(--dark-color);
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: right 0.2s;
+  width: 50px;
+  height: 50px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label.btn-menu span {
+  width: 30px;
+  height: 30px;
+
+  -webkit-mask-image: url("/images/settings-icon/setting.svg");
+  mask-image: url("/images/settings-icon/setting.svg");
+  background-color: #def2f1;
+
+  transition: all 0.3s ease;
+}
+
+label.btn-menu:hover span {
+  background-color: var(--body-bg-color);
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span {
+  -webkit-mask-image: url("/images/settings-icon/close.svg");
+  mask-image: url("/images/settings-icon/close.svg");
+  background-color: #def2f1;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu:hover span {
+  background-color: var(--body-bg-color);
 }
