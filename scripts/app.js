@@ -4,6 +4,9 @@ function init(min = 1, max = 100, shots = 5) {
 	initialValues.shots = shots;
 	initialValues.shotsCounter = shots;
 	initialValues.mysNumbers = randomInteger(min, max);
+	minInfo.innerText = String(min);
+	maxInfo.innerText = String(max);
+
 
 	checkBtn.removeAttribute('disabled');
 	inputUserValue.removeAttribute('disabled');
@@ -26,9 +29,15 @@ function newGame(event) {
 
 checkBtn.addEventListener('click', generate);
 newGameBtn.addEventListener('click', newGame);
-inputUserValue.addEventListener('keydown', enterSubmit);
 
 window.onload = function() {
 	init();
 };
+function change_theme(event) {
+	event.preventDefault();
+	html.classList.toggle('dark-theme');
+}
+switchTheme.addEventListener('change', change_theme);
+inputUserValue.addEventListener('keydown', enterSubmit);
+configBtn.addEventListener('click', config);
 
