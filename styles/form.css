@@ -54,6 +54,17 @@ label[for="user_number"] {
 	margin-top: 30px;
 }
 
+/* .buttons button:not(:last-child) {
+	margin-right: 25px;
+}
+
+.buttons {
+	flex-direction: column;
+}
+.buttons button {
+	width: 100%;
+} */
+
 .basic-btn {
 	width: 230px;
 	height: 50px;
