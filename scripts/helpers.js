@@ -15,14 +15,14 @@ function stop() {
 
 function config(event) {
    event.preventDefault();
-   let inputMinElement = inputMin.value.trim().length ? Number(inputMin.value) : 0;
-   let inputMaxElement = inputMax.value.trim().length ? Number(inputMax.value) : 0;
-   let inputShotsElement = shotsAdd.value.trim().length ? Number(shotsAdd.value) : 0;
+   const inputMinElement = inputMin.value.trim().length ? Number(inputMin.value) : 0;
+   const inputMaxElement = inputMax.value.trim().length ? Number(inputMax.value) : 0;
+   const inputShotsElement = shotsAdd.value.trim().length ? Number(shotsAdd.value) : 0;
    inputMin.value = '';
    inputMax.value = '';
    shotsAdd.value = '';
    switch (true) {
-      case (inputMinElement.length === 0 || inputMaxElement.length === 0 || inputShotsElement.length === 0):
+      case (inputMinElement === 0 || inputMaxElement === 0 || inputShotsElement === 0):
          return;
       case (inputMaxElement <= inputMinElement):
          return;
