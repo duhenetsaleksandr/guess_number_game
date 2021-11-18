@@ -97,13 +97,10 @@ describe('On show', () => {
 
 describe('validation of input data to compute a random number', () => {
     it('input validation: min = max', () => {
-        expect(randomInteger(1,1)).to.equal (1,1);
-    })
-    it('input validation: min > max', () => {
-        expect(randomInteger(1,2)).to.equal (1,2);
+        expect(randomInteger(1,1)).to.equal (1);
     })
     it('input validation: min and max =0', () => {
-        expect(randomInteger(0,0)).to.equal (0,0);
+        expect(randomInteger(0,0)).to.equal (0);
     })
     it('input validation: min and max > 200', () => {
         expect(randomInteger(199,199)).to.equal (199, 199);
