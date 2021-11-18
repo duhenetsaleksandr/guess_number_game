@@ -108,5 +108,6 @@ describe('validation of input data to compute a random number', () => {
     it('input validation: min and max > 200', () => {
         expect(randomInteger(201,205)).to.equal ();
     })
+
 });
 
