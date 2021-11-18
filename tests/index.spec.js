@@ -115,7 +115,7 @@ describe('On HTML', function () {
       expect(document.getElementById('prompt_text').innerText.toLowerCase()).to.be.equal('not enough');
    });
 
-   it('should show prompt "bit too much" if value less than mysterious number', function () {
+   it('should show prompt "bit too much" if value greater than mysterious number', function () {
       window.onload = () => {}
       init();
       document.getElementById('user_number').value = initialValues.mysNumbers + 1;
@@ -215,5 +215,6 @@ describe('On HTML', function () {
       init();
       document.getElementById('theme_css').click();
       expect(window.getComputedStyle(document.querySelector('body')).backgroundColor).to.be.equal('rgb(35, 36, 42)');
+      document.getElementById('theme_css').click();
    });
 });
