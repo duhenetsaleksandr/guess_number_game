@@ -53,6 +53,9 @@ label[for="user_number"] {
 	justify-content: space-between;
 	margin-top: 30px;
 }
+.buttons button:not(:last-child) {
+	margin-right: 25px;
+}
 
 .basic-btn {
 	width: 230px;

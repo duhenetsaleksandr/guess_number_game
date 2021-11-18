@@ -8,7 +8,16 @@
 	--btn-font-disabled-color: #c7c7c7;
 	--btn-bg-disabled-color: #83838373;
 }
-
+.dark-theme {
+	--font-color: #feffff;
+	--body-bg-color: #23242a;
+	--light-primary-color: #def2f1;
+	--dark-primary-color: #3c51fa;
+	--dark-color: #1b1c22;
+	--btn-bg-active-color: #374785;
+	--btn-font-disabled-color: #c7c7c7;
+	--btn-bg-disabled-color: #83838373;
+}
 body {
 	background-color: var(--body-bg-color);
 	font-family: "Roboto Condensed", sans-serif;
