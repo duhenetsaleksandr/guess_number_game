@@ -5,9 +5,9 @@ describe('On init', () => {
         expect(initialValues.max).to.equal (0);
         expect(initialValues.shots).to.equal (0);
     })
-    it('input validation: min < max', () => {
+    it('input validation: min > max', () => {
         init(5, 1, 1);
-        expect(initialValues.min).to.equal (1);
+        expect(initialValues.min).to.equal (5);
         expect(initialValues.max).to.equal (1);
         expect(initialValues.shots).to.equal (1);
     })
@@ -25,8 +25,8 @@ describe('On init', () => {
     })
     it('input validation:  min, max > 200', () => {
         init(300, 450, 12);
-        expect(initialValues.min).to.equal (450;
-        expect(initialValues.max).to.equal (300);
+        expect(initialValues.min).to.equal (300);
+        expect(initialValues.max).to.equal (450);
         expect(initialValues.shots).to.equal (12);
     })
     it('Valid data minimum', () => {
@@ -47,51 +47,51 @@ describe('On init', () => {
 describe('On show', () => {
     it('input validation if the entered value is greater than max less min', () => {
         show('Number outside the range', 'value must be in the range', 15);
-        expect(mainText.innerText).to.equal ('Number outside the range');
+        expect(mainText.innerText).to.equal ('NUMBER OUTSIDE THE RANGE');
         expect(promptText.innerText).to.equal ('value must be in the range');
-        expect(shotsLeft.innerText).to.equal (15);
+        expect(shotsLeft.innerText).to.equal ('15');
     })
     it('input validation if the entered value is not an integer', () => {
         show('Number is not integer', 'only integer', 5);
-        expect(mainText.innerText).to.equal ('Number is not integer');
+        expect(mainText.innerText).to.equal ('NUMBER IS NOT INTEGER');
         expect(promptText.innerText).to.equal ('only integer');
-        expect(shotsLeft.innerText).to.equal (5);
-        })
-    it('input validation the entered number is greater than random', () => {
-        show('You did not guess right', 'bit too much', 5);
-        expect(mainText.innerText).to.equal ('You did not guess right');
-        expect(promptText.innerText).to.equal ('bit too much');
-        expect(shotsLeft.innerText).to.equal (5);
+        expect(shotsLeft.innerText).to.equal ('5');
     })
     it('input validation the entered number is greater than random', () => {
         show('You did not guess right', 'bit too much', 5);
-        expect(mainText.innerText).to.equal ('You did not guess right');
+        expect(mainText.innerText).to.equal ('YOU DID NOT GUESS RIGHT');
         expect(promptText.innerText).to.equal ('bit too much');
-        expect(shotsLeft.innerText).to.equal (5);
+        expect(shotsLeft.innerText).to.equal ('5');
+    })
+    it('input validation the entered number is greater than random', () => {
+        show('You did not guess right', 'bit too much', 5);
+        expect(mainText.innerText).to.equal ('YOU DID NOT GUESS RIGHT');
+        expect(promptText.innerText).to.equal ('bit too much');
+        expect(shotsLeft.innerText).to.equal ('5');
     })
     it('input validation the entered number is less than the random number', () => {
         show('You did not guess right', 'not enough', 5);
-        expect(mainText.innerText).to.equal ('You did not guess right');
+        expect(mainText.innerText).to.equal ('YOU DID NOT GUESS RIGHT');
         expect(promptText.innerText).to.equal ('not enough');
-        expect(shotsLeft.innerText).to.equal (5);
+        expect(shotsLeft.innerText).to.equal ('5');
     })
     it('guessed', () => {
         show('You win', `mystery number is ${initialValues.mysNumbers}`, 2);
-        expect(mainText.innerText).to.equal ('You win');
+        expect(mainText.innerText).to.equal ('YOU WIN');
         expect(promptText.innerText).to.equal (`mystery number is ${initialValues.mysNumbers}`);
-        expect(shotsLeft.innerText).to.equal (2);
+        expect(shotsLeft.innerText).to.equal ('2');
     })
     it('lost', () => {
         show('You did not guess right', 'try again', 0);
-        expect(mainText.innerText).to.equal ('You did not guess right');
+        expect(mainText.innerText).to.equal ('YOU DID NOT GUESS RIGHT');
         expect(promptText.innerText).to.equal ('try again');
-        expect(shotsLeft.innerText).to.equal (0);
+        expect(shotsLeft.innerText).to.equal ('0');
     })
     it('attempts exhausted', () => {
         show('Game over', 'try again', 0);
-        expect(mainText.innerText).to.equal ('Game over');
+        expect(mainText.innerText).to.equal ('GAME OVER');
         expect(promptText.innerText).to.equal ('try again');
-        expect(shotsLeft.innerText).to.equal (0);
+        expect(shotsLeft.innerText).to.equal ('0');
     })
 });
 
@@ -99,18 +99,13 @@ describe('validation of input data to compute a random number', () => {
     it('input validation: min = max', () => {
         expect(randomInteger(1,1)).to.equal (1,1);
     })
-    it('input validation: min < max', () => {
-        expect(randomInteger(5,1)).to.equal (5,1);
+    it('input validation: min > max', () => {
+        expect(randomInteger(1,2)).to.equal (1,2);
     })
     it('input validation: min and max =0', () => {
         expect(randomInteger(0,0)).to.equal (0,0);
     })
     it('input validation: min and max > 200', () => {
-        expect(randomInteger(201,205)).to.equal (201,205);
+        expect(randomInteger(199,199)).to.equal (199, 199);
     })
-    it('input validation: min and max > 200', () => {
-        expect(randomInteger(150,190)).to.equal (150,190);
-    })
-
 });
-
