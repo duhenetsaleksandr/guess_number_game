@@ -10,7 +10,7 @@ function generate(event) {
 		switch (true) {
 			case (userNum < initialValues.min || userNum > initialValues.max):
 				initialValues.shotsCounter -= 1;
-				show('Number outside the range', 'Value must must be in the range');
+				show('Number outside the range', 'value must be in the range');
 				break;
 			case (Number.isInteger(userNum) === false):
 				initialValues.shotsCounter -= 1;

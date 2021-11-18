@@ -46,9 +46,9 @@ describe('On init', () => {
 
 describe('On show', () => {
     it('input validation if the entered value is greater than max less min', () => {
-        show('Number outside the range', 'Number outside the range', 15);
+        show('Number outside the range', 'value must be in the range', 15);
         expect(mainText.innerText).to.equal ('Number outside the range');
-        expect(promptText.innerText).to.equal ('Number outside the range');
+        expect(promptText.innerText).to.equal ('value must be in the range');
         expect(shotsLeft.innerText).to.equal (15);
     })
     it('input validation if the entered value is not an integer', () => {
