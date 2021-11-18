@@ -12,7 +12,7 @@ const maxInfo = document.getElementById("max-info");
 const initialValues = {};
 
 const MAIN_TEXT_MESSAGE = 'try your luck';
-const PROMPT_TEXT_MESSAGE = 'guess the mysterious number';
+const PROMPT_TEXT_MESSAGE = 'mysterious number';
 const switchTheme = document.getElementById('theme_css');
 const html = document.querySelector('html');
 

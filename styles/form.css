@@ -38,22 +38,21 @@ label[for="user_number"] {
 	background-color: var(--light-primary-color);
 	color: var(--dark-primary-color);
 }
-
 .basic-input:focus {
 	box-shadow: 0 0 10px 0 var(--dark-primary-color);
 }
-
 #user_number {
 	width: 100%;
 }
-
 .buttons {
 	width: 50%;
 	display: flex;
 	justify-content: space-between;
 	margin-top: 30px;
 }
-
+.buttons button:not(:last-child) {
+	margin-right: 25px;
+}
 .basic-btn {
 	width: 230px;
 	height: 50px;
