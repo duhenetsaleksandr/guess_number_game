@@ -10,7 +10,7 @@ describe('On HTML', function () {
       }
    });
 
-   it('should show message "Game Over" if attempts ended and the number was not guessed', function () {
+   it('should show message "GAME OVER" if attempts ended and the number was not guessed', function () {
       window.onload = () => {}
       init();
       for (let i = 0; i < initialValues.shots; i++) {
@@ -28,7 +28,7 @@ describe('On HTML', function () {
       expect(document.getElementById('check').getAttribute('disabled')).to.be.equal(null);
    });
 
-   it('should desable input and check button after game over', function () {
+   it('should disable input and check button after game over', function () {
       window.onload = () => {}
       init();
       for (let i = 0; i < initialValues.shots; i++) {
@@ -40,7 +40,7 @@ describe('On HTML', function () {
       expect(document.getElementById('check').getAttribute('disabled')).to.be.equal('disabled');
    });
 
-   it('should show message "You Win" if number was guessed', function () {
+   it('should show message "YOU WIN" if number was guessed', function () {
       window.onload = () => {}
       init();
       document.getElementById('user_number').value = initialValues.mysNumbers;
@@ -76,5 +76,47 @@ describe('On HTML', function () {
       window.onload = () => {}
       init();
       expect(document.getElementById('main_text').innerText.toLowerCase()).to.be.equal('try your luck');
+   });
+
+   it('should show message "YOU DID NOT GUESS RIGHT" if the number was not guessed', function () {
+      window.onload = () => {}
+      init();
+      const number = initialValues.mysNumbers === 100 ? initialValues.mysNumbers - 1 : initialValues.mysNumbers + 1;
+      document.getElementById('user_number').value = number;
+      document.getElementById('check').click();
+      expect(document.getElementById('main_text').innerText.toLowerCase()).to.be.equal('you did not guess right');
+   });
+
+   it('should show message "VALUE IS EMPTY" if input value is empty', function () {
+      window.onload = () => {}
+      init();
+      document.getElementById('check').click();
+      expect(document.getElementById('main_text').innerText.toLowerCase()).to.be.equal('value is empty');
+   });
+
+   it('should show prompt "not enough" if value less than mysterious number', function () {
+      window.onload = () => {}
+      init();
+      document.getElementById('user_number').value = initialValues.mysNumbers - 1;
+      document.getElementById('check').click();
+      expect(document.getElementById('prompt_text').innerText.toLowerCase()).to.be.equal('not enough');
+   });
+
+   it('should show prompt "bit too much" if value less than mysterious number', function () {
+      window.onload = () => {}
+      init();
+      document.getElementById('user_number').value = initialValues.mysNumbers + 1;
+      document.getElementById('check').click();
+      expect(document.getElementById('prompt_text').innerText.toLowerCase()).to.be.equal('bit too much');
+   });
+
+   it('should start new game if button "new game" is pressed', function () {
+      window.onload = () => {}
+      init();
+      document.getElementById('user_number').value = initialValues.mysNumbers + 1;
+      document.getElementById('check').click();
+      init();
+      expect(document.getElementById('main_text').innerText.toLowerCase()).to.be.equal('try your luck');
+      expect(parseInt(document.getElementById('shots').innerText)).to.be.equal(initialValues.shots);
    });
 });
