@@ -179,9 +179,9 @@ label.btn-menu span {
   width: 30px;
   height: 30px;
 
-  -webkit-mask-image: url("/images/settings-icon/setting.svg");
-  mask-image: url("/images/settings-icon/setting.svg");
-  background-color: #def2f1;
+  -webkit-mask-image: url("../images/setting-icons/setting.svg");
+  mask-image: url("../images/setting-icons/setting.svg");
+  background-color: var(--light-primary-color);
 
   transition: all 0.3s ease;
 }
@@ -191,9 +191,9 @@ label.btn-menu:hover span {
 }
 
 .hidden-menu-ticker:checked ~ .btn-menu span {
-  -webkit-mask-image: url("/images/settings-icon/close.svg");
-  mask-image: url("/images/settings-icon/close.svg");
-  background-color: #def2f1;
+  -webkit-mask-image: url("../images/setting-icons/close.svg");
+  mask-image: url("../images/setting-icons/close.svg");
+  background-color: var(--light-primary-color);
 }
 
 .hidden-menu-ticker:checked ~ .btn-menu:hover span {
