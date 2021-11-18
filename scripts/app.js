@@ -27,17 +27,18 @@ function newGame(event) {
 	init();
 }
 
-checkBtn.addEventListener('click', generate);
-newGameBtn.addEventListener('click', newGame);
-
-window.onload = function() {
-	init();
-};
 function change_theme(event) {
 	event.preventDefault();
 	html.classList.toggle('dark-theme');
 }
-switchTheme.addEventListener('change', change_theme);
-inputUserValue.addEventListener('keydown', enterSubmit);
-configBtn.addEventListener('click', config);
 
+inputUserValue.addEventListener('keydown', enterSubmit);
+checkBtn.addEventListener('click', generate);
+newGameBtn.addEventListener('click', newGame);
+configBtn.addEventListener('click', config);
+wrapperText.addEventListener('animationend', () => wrapperText.classList.remove('active'));
+switchTheme.addEventListener('change', change_theme);
+
+window.onload = function() {
+	init();
+};

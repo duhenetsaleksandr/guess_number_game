@@ -2,6 +2,7 @@ const inputUserValue = document.getElementById("user_number");
 const checkBtn = document.getElementById("check");
 const newGameBtn = document.getElementById("new_game");
 
+const wrapperText = document.getElementById('wrapper_info');
 const mainText = document.getElementById("main_text");
 const promptText = document.getElementById("prompt_text");
 const shotsLeft = document.getElementById("shots");
