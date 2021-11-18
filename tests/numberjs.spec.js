@@ -1,4 +1,8 @@
 describe('On init', () => {
+    after(() => {
+        init();
+    });
+
     it('input validation: value = 0', () => {
         init(0, 0, 0);
         expect(initialValues.min).to.equal (0);
@@ -45,6 +49,10 @@ describe('On init', () => {
 
 
 describe('On show', () => {
+    after(() => {
+        init();
+    });
+
     it('input validation if the entered value is greater than max less min', () => {
         show('Number outside the range', 'value must be in the range', 15);
         expect(mainText.innerText).to.equal ('NUMBER OUTSIDE THE RANGE');
@@ -96,6 +104,10 @@ describe('On show', () => {
 });
 
 describe('validation of input data to compute a random number', () => {
+    after(() => {
+        init();
+    });
+
     it('input validation: min = max', () => {
         expect(randomInteger(1,1)).to.equal (1);
     })
