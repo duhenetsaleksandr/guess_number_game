@@ -61,14 +61,17 @@
 	font-size: 20px;
 }
 
-@-webkit-keyframes rotateX {
-	0% { -webkit-transform: rotateX(0deg); }
-	100% { -webkit-transform: rotateX(360deg); }
+@keyframes grow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100%;
+	}
 }
 
 .wrapper_info.active .title_enter,
 .wrapper_info.active .title_enter-text,
 .wrapper_info.active .title_enter-podtext {
-	-webkit-animation: rotateX 1s linear;
-
+	-webkit-animation: grow 1s linear;
 }
