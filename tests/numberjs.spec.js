@@ -1,33 +1,33 @@
 describe('On init', () => {
     it('input validation: value = 0', () => {
         init(0, 0, 0);
-        expect(initialValues.min).to.equal ();
-        expect(initialValues.max).to.equal ();
-        expect(initialValues.shots).to.equal ();
+        expect(initialValues.min).to.equal (0);
+        expect(initialValues.max).to.equal (0);
+        expect(initialValues.shots).to.equal (0);
     })
     it('input validation: min < max', () => {
         init(5, 1, 1);
-        expect(initialValues.min).to.equal ();
-        expect(initialValues.max).to.equal ();
-        expect(initialValues.shots).to.equal ();
+        expect(initialValues.min).to.equal (1);
+        expect(initialValues.max).to.equal (1);
+        expect(initialValues.shots).to.equal (1);
     })
     it('input validation: min, max, shots < 0', () => {
         init(-50, -10, -1);
-        expect(initialValues.min).to.equal ();
-        expect(initialValues.max).to.equal ();
-        expect(initialValues.shots).to.equal ();
+        expect(initialValues.min).to.equal (-50);
+        expect(initialValues.max).to.equal (-10);
+        expect(initialValues.shots).to.equal (-1);
     })
     it('input validation: shots >15', () => {
         init(10, 500, 16);
-        expect(initialValues.min).to.equal ();
-        expect(initialValues.max).to.equal ();
-        expect(initialValues.shots).to.equal ();
+        expect(initialValues.min).to.equal (10);
+        expect(initialValues.max).to.equal (500);
+        expect(initialValues.shots).to.equal (16);
     })
     it('input validation:  min, max > 200', () => {
         init(300, 450, 12);
-        expect(initialValues.min).to.equal ();
-        expect(initialValues.max).to.equal ();
-        expect(initialValues.shots).to.equal ();
+        expect(initialValues.min).to.equal (450;
+        expect(initialValues.max).to.equal (300);
+        expect(initialValues.shots).to.equal (12);
     })
     it('Valid data minimum', () => {
         init(1, 1, 1);
@@ -97,16 +97,19 @@ describe('On show', () => {
 
 describe('validation of input data to compute a random number', () => {
     it('input validation: min = max', () => {
-        expect(randomInteger(1,1)).to.equal ();
+        expect(randomInteger(1,1)).to.equal (1,1);
     })
     it('input validation: min < max', () => {
-        expect(randomInteger(1,5)).to.equal ();
+        expect(randomInteger(5,1)).to.equal (5,1);
     })
     it('input validation: min and max =0', () => {
-        expect(randomInteger(0,0)).to.equal ();
+        expect(randomInteger(0,0)).to.equal (0,0);
     })
     it('input validation: min and max > 200', () => {
-        expect(randomInteger(201,205)).to.equal ();
+        expect(randomInteger(201,205)).to.equal (201,205);
+    })
+    it('input validation: min and max > 200', () => {
+        expect(randomInteger(150,190)).to.equal (150,190);
     })
 
 });
